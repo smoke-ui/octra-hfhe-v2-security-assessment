@@ -30,6 +30,11 @@ jobs:
           for p in list(pathlib.Path('results').glob('*.json')) + list(pathlib.Path('results').glob('*.sarif')):
               json.loads(p.read_text())
           PY
+          python3 -m venv /tmp/sarif-validator
+          /tmp/sarif-validator/bin/pip install --quiet check-jsonschema==0.37.4
+          /tmp/sarif-validator/bin/check-jsonschema \
+            --schemafile https://json.schemastore.org/sarif-2.1.0.json \
+            results/findings.sarif
           git diff --check
       - name: Secret-pattern guard
         run: python3 scripts/secret-scan.py
