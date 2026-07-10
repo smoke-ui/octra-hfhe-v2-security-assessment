@@ -1,0 +1,26 @@
+# Build products
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+build/
+bin/
+
+# Generated data and environments
+*.csv
+*.bin
+*.ct
+*.zip
+.venv/
+.tensor-venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# Secrets and wallet material
+*wallet*.txt
+wallet.json
+sk.bin
+plaintext.txt
+.env

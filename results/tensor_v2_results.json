@@ -1,0 +1,61 @@
+{
+  "length_control": {
+    "accuracy": 0.06770833333333333,
+    "chance": 0.0625,
+    "permutation_mean": 0.05633680555555556,
+    "permutation_p": 0.28903654485049834,
+    "correct": 13,
+    "n": 192
+  },
+  "payload": {
+    "accuracy": 0.046875,
+    "chance": 0.0625,
+    "permutation_mean": 0.05600694444444444,
+    "permutation_p": 0.7142857142857143,
+    "correct": 9,
+    "n": 192
+  },
+  "mode_top_energy": {
+    "artifact_mean": [
+      0.530895136882316,
+      0.181701411863934,
+      0.18434275333776037,
+      0.1847643515617929
+    ],
+    "control_mean": [
+      0.5371845341509408,
+      0.20329393072478874,
+      0.20677503185733848,
+      0.20741109141253358
+    ],
+    "artifact_n": 22,
+    "control_n": 192
+  },
+  "artifact_classifier_diagnostic": {
+    "predicted_classes": [
+      9,
+      8,
+      4,
+      12,
+      6,
+      1,
+      7,
+      6,
+      15,
+      2,
+      1,
+      12,
+      12,
+      14,
+      1,
+      15,
+      3,
+      7,
+      3,
+      15,
+      9,
+      11
+    ],
+    "mean_softmax_confidence": 0.07082322313164655
+  }
+}

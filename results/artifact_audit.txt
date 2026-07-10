@@ -1,0 +1,30 @@
+bundle.count=22 trailing_bytes=0 ct_wire_canonical=1 pk_wire_canonical=1 H_reproducible_and_digest_ok=1
+pk.params B=337 m=8192 n=16384 hwt=192 xwt=128 errwt=128 entropy=128
+H.weight_hist=192:8190,193:8194, parity_even=8190 parity_odd=8194 duplicate_columns=0 tail_bits_nonzero=0
+H.gf2_rank=8192 deficiency=0
+pk.permutation_inverse_ok=1 pow_table_geometric=1 generator_order_divides_B_nontrivial=1
+ct[0].bytes=46237 slots=1 layers=2 edges=43 c0=1
+ct[1].bytes=50521 slots=1 layers=2 edges=47 c0=1
+ct[2].bytes=58018 slots=1 layers=2 edges=54 c0=1
+ct[3].bytes=60160 slots=1 layers=2 edges=56 c0=1
+ct[4].bytes=61231 slots=1 layers=2 edges=57 c0=1
+ct[5].bytes=71941 slots=1 layers=2 edges=67 c0=1
+ct[6].bytes=73012 slots=1 layers=2 edges=68 c0=1
+ct[7].bytes=77296 slots=1 layers=2 edges=72 c0=1
+ct[8].bytes=71941 slots=1 layers=2 edges=67 c0=1
+ct[9].bytes=85864 slots=1 layers=2 edges=80 c0=1
+ct[10].bytes=85864 slots=1 layers=2 edges=80 c0=1
+ct[11].bytes=90148 slots=1 layers=2 edges=84 c0=1
+ct[12].bytes=100858 slots=1 layers=2 edges=94 c0=1
+ct[13].bytes=98716 slots=1 layers=2 edges=92 c0=1
+ct[14].bytes=103000 slots=1 layers=2 edges=96 c0=1
+ct[15].bytes=101929 slots=1 layers=2 edges=95 c0=1
+ct[16].bytes=115852 slots=1 layers=2 edges=108 c0=1
+ct[17].bytes=112639 slots=1 layers=2 edges=105 c0=1
+ct[18].bytes=116923 slots=1 layers=2 edges=109 c0=1
+ct[19].bytes=124420 slots=1 layers=2 edges=116 c0=1
+ct[20].bytes=128704 slots=1 layers=2 edges=120 c0=1
+ct[21].bytes=127633 slots=1 layers=2 edges=119 c0=1
+layers.total=44 base=44 prod=0 empty_PC=0 repeated_seed=0 repeated_nonce=0 ztag_mismatch=0 repeated_PC=0
+edges.total=1829 idx_oob=0 zero_weight_vectors=0 zero_sigma=0 repeated_weight_vectors=0 repeated_sigma_vectors=0 sigma_tail_bits_nonzero=0
+sigma.popcount_range=3933..4236 distinct_popcounts=234 public_layer_sums_distinct=44/44
