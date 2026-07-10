@@ -1,0 +1,54 @@
+name: security-assessment-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      - name: Rust format and tests
+        run: |
+          cargo fmt --check --manifest-path tools/rust-wire-audit/Cargo.toml
+          cargo test --manifest-path tools/rust-wire-audit/Cargo.toml
+      - name: Python, shell, JSON, and whitespace checks
+        run: |
+          python3 -m compileall -q tools scripts
+          bash -n scripts/*.sh
+          python3 - <<'PY'
+          import json, pathlib
+          for p in pathlib.Path('results').glob('*.json'):
+              json.loads(p.read_text())
+          PY
+          git diff --check
+      - name: Secret-pattern guard
+        run: python3 scripts/secret-scan.py
+
+  reproducibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install native dependencies
+        run: sudo apt-get update && sudo apt-get install -y g++ python3-venv
+      - name: Pin upstream artifacts
+        run: ./scripts/setup.sh
+      - name: Verify published artifacts
+        run: ./scripts/verify-artifacts.sh
+      - name: Compile and run safe experiments
+        run: ./scripts/run-all.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: assessment-results
+          path: results/latest/

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "assessment": "OCTRA HFHE Challenge v2",
+  "challenge_commit": "0d08e9622921e5930175a660df0061a65548972f",
+  "pvac_commit": "071b0e909c119de815e284b347c4bd979cb59ef3",
+  "plaintext_recovered": false,
+  "findings": [
+    {
+      "id": "OCTRA-HFHE-INFO-001",
+      "title": "Ciphertext count leaks a narrow plaintext-length interval",
+      "severity": "informational",
+      "confidence": "high",
+      "impact": "Reveals that plaintext length is between 301 and 315 bytes",
+      "recommendation": "Pad plaintexts to fixed public size classes"
+    },
+    {
+      "id": "OCTRA-RELEASE-LOW-002",
+      "title": "Stale documentation checksum",
+      "severity": "low",
+      "confidence": "high",
+      "impact": "Release integrity verification reports a false mismatch",
+      "recommendation": "Generate checksums after release content is finalized"
+    },
+    {
+      "id": "OCTRA-PVAC-LOW-003",
+      "title": "Pointer-addition bounds check can be hardened",
+      "severity": "low",
+      "confidence": "medium",
+      "impact": "Potential undefined behavior on adversarial extreme lengths",
+      "recommendation": "Compare requested length against remaining bytes before pointer arithmetic"
+    },
+    {
+      "id": "OCTRA-PVAC-LOW-004",
+      "title": "Noncanonical field encodings are normalized",
+      "severity": "low",
+      "confidence": "high",
+      "impact": "Permissive paths may accept multiple encodings for one field value",
+      "recommendation": "Reject noncanonical field encodings"
+    },
+    {
+      "id": "OCTRA-PVAC-INFO-005",
+      "title": "Ambiguous R_com internal/wire lifecycle",
+      "severity": "informational",
+      "confidence": "high",
+      "impact": "Maintenance risk across proof and wire representations",
+      "recommendation": "Separate wire-layer and proof-layer types"
+    }
+  ]
+}

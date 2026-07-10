@@ -13,6 +13,8 @@
 
 ## 1. Executive summary
 
+For a concise non-technical overview, see [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md). The repository also provides a visual [`THREAT_MODEL.md`](THREAT_MODEL.md), standardized [`FINDINGS.md`](FINDINGS.md), experiment [`METHODOLOGY.md`](METHODOLOGY.md), and explicit [`LIMITATIONS.md`](LIMITATIONS.md).
+
 We assessed OCTRA's public HFHE Challenge v2 with the stated winning condition: recover the plaintext of `secret.ct` using only the published files.
 
 The assessment reproduced the official artifact parser and audit, independently parsed and reserialized the artifacts, analyzed the concrete C++ implementation, tested known and novel attack hypotheses, compared historical challenge generations, inspected public forks and pull requests, and reviewed applicable classical and quantum LPN literature.

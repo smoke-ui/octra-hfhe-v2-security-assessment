@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: OCTRA HFHE Challenge v2 Security Assessment
+message: If you use this assessment or its experiments, cite this repository.
+type: software
+authors:
+  - family-names: Smoke
+repository-code: https://github.com/smoke-ui/octra-hfhe-v2-security-assessment
+url: https://github.com/smoke-ui/octra-hfhe-v2-security-assessment
+license: MIT
+version: 1.1.0
+date-released: 2026-07-10
+keywords:
+  - cryptanalysis
+  - homomorphic encryption
+  - LPN
+  - security assessment
+  - OCTRA
