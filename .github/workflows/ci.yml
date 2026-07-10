@@ -13,9 +13,10 @@ jobs:
   static:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30
         with:
+          toolchain: 1.97.0
           components: rustfmt
       - name: Rust format and tests
         run: |
@@ -35,15 +36,17 @@ jobs:
           /tmp/sarif-validator/bin/check-jsonschema \
             --schemafile https://json.schemastore.org/sarif-2.1.0.json \
             results/findings.sarif
-          git diff --check
+          git show --check --format= HEAD
       - name: Secret-pattern guard
         run: python3 scripts/secret-scan.py
 
   reproducibility:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: dtolnay/rust-toolchain@4be7066ada62dd38de10e7b70166bc74ed198c30
+        with:
+          toolchain: 1.97.0
       - name: Install native dependencies
         run: sudo apt-get update && sudo apt-get install -y g++ python3-venv
       - name: Pin upstream artifacts
@@ -52,7 +55,7 @@ jobs:
         run: ./scripts/verify-artifacts.sh
       - name: Compile and run safe experiments
         run: ./scripts/run-all.sh
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: always()
         with:
           name: assessment-results
