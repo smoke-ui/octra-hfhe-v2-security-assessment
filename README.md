@@ -35,7 +35,10 @@ Assessed versions:
 - `SHA256SUMS` contains a stale checksum for the subsequently edited README.
 - Deserialization bounds and canonicalization can be hardened.
 - `R_com` has an ambiguous internal-versus-wire lifecycle.
-- Known proof/integrity issues in other PVAC paths did not compose into challenge plaintext recovery.
+
+## Reviewed non-findings
+
+- Publicly reported proof/integrity issues in other PVAC paths were reviewed, but the required proof/reset objects are absent from `secret.ct`; no composition into challenge plaintext recovery was demonstrated.
 
 ## Attack classes tested
 

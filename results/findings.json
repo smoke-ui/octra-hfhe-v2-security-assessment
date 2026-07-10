@@ -1,7 +1,9 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "assessment": "OCTRA HFHE Challenge v2",
+  "challenge_repository": "https://github.com/octra-labs/hfhe-challenge",
   "challenge_commit": "0d08e9622921e5930175a660df0061a65548972f",
+  "pvac_repository": "https://github.com/octra-labs/pvac_hfhe_cpp",
   "pvac_commit": "071b0e909c119de815e284b347c4bd979cb59ef3",
   "plaintext_recovered": false,
   "findings": [
@@ -10,6 +12,13 @@
       "title": "Ciphertext count leaks a narrow plaintext-length interval",
       "severity": "informational",
       "confidence": "high",
+      "affected_repository": "octra-labs/hfhe-challenge",
+      "affected_commit": "0d08e9622921e5930175a660df0061a65548972f",
+      "affected_artifact": "secret.ct",
+      "evidence": [
+        "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/secret.ct",
+        "https://raw.githubusercontent.com/octra-labs/pvac_hfhe_cpp/071b0e909c119de815e284b347c4bd979cb59ef3/include/pvac/utils/text.hpp"
+      ],
       "impact": "Reveals that plaintext length is between 301 and 315 bytes",
       "recommendation": "Pad plaintexts to fixed public size classes"
     },
@@ -18,14 +27,26 @@
       "title": "Stale documentation checksum",
       "severity": "low",
       "confidence": "high",
-      "impact": "Release integrity verification reports a false mismatch",
-      "recommendation": "Generate checksums after release content is finalized"
+      "affected_repository": "octra-labs/hfhe-challenge",
+      "affected_commit": "0d08e9622921e5930175a660df0061a65548972f",
+      "affected_artifact": "SHA256SUMS",
+      "evidence": [
+        "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/SHA256SUMS"
+      ],
+      "impact": "Upstream release integrity verification reports a false README mismatch",
+      "recommendation": "Generate checksums after upstream release content is finalized"
     },
     {
       "id": "OCTRA-PVAC-LOW-003",
       "title": "Pointer-addition bounds check can be hardened",
       "severity": "low",
       "confidence": "medium",
+      "affected_repository": "octra-labs/hfhe-challenge",
+      "affected_commit": "0d08e9622921e5930175a660df0061a65548972f",
+      "affected_artifact": "source/pvac_artifact_serialize.hpp",
+      "evidence": [
+        "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"
+      ],
       "impact": "Potential undefined behavior on adversarial extreme lengths",
       "recommendation": "Compare requested length against remaining bytes before pointer arithmetic"
     },
@@ -34,6 +55,12 @@
       "title": "Noncanonical field encodings are normalized",
       "severity": "low",
       "confidence": "high",
+      "affected_repository": "octra-labs/hfhe-challenge",
+      "affected_commit": "0d08e9622921e5930175a660df0061a65548972f",
+      "affected_artifact": "source/pvac_artifact_serialize.hpp",
+      "evidence": [
+        "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"
+      ],
       "impact": "Permissive paths may accept multiple encodings for one field value",
       "recommendation": "Reject noncanonical field encodings"
     },
@@ -42,6 +69,13 @@
       "title": "Ambiguous R_com internal/wire lifecycle",
       "severity": "informational",
       "confidence": "high",
+      "affected_repository": "octra-labs/hfhe-challenge",
+      "affected_commit": "0d08e9622921e5930175a660df0061a65548972f",
+      "affected_artifact": "source/pvac_artifact_serialize.hpp",
+      "evidence": [
+        "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp",
+        "https://github.com/octra-labs/pvac_hfhe_cpp/tree/071b0e909c119de815e284b347c4bd979cb59ef3"
+      ],
       "impact": "Maintenance risk across proof and wire representations",
       "recommendation": "Separate wire-layer and proof-layer types"
     }
