@@ -1,0 +1,11 @@
+[package]
+name = "octra-hfhe-wire-audit"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Independent dependency-free Rust parser for OCTRA HFHE Challenge v2 ciphertext bundles"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

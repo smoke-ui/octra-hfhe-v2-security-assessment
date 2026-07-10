@@ -34,6 +34,7 @@ Assessed versions:
 - LPN/PRF statistical and implementation analysis
 - Historical RNG and cross-artifact correlation
 - C++ memory and serialization leakage
+- Independent Rust wire-format differential audit
 - Pedersen/Ristretto relations
 - Order-337 subgroup and character projections
 - Four-dimensional tensor/hypergraph analysis
@@ -55,6 +56,7 @@ results/        Machine-readable experiment summaries
 
 - Linux x86-64 with AES/PCLMUL support recommended
 - C++17 compiler
+- Stable Rust toolchain for the independent wire audit
 - Python 3
 - NumPy for tensor/invariant analysis
 - Bun or Node-compatible packages for the wallet benchmark

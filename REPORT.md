@@ -305,6 +305,22 @@ Recommendations:
 - Version serializers around an explicit schema.
 - Add regression tests asserting that no secret-checkable mask commitment is emitted.
 
+### 11.5 Independent Rust wire-format differential audit
+
+To avoid reproducing C++ parser assumptions, a dependency-free Rust parser was implemented without including or calling OCTRA's serializer. It independently validates bundle/member framing, exact EOF, layer rules, product parents, canonical 127-bit field encodings, edge references and signs, slot/weight consistency, bit-vector sizes and tail bits, and BASE-layer nonce uniqueness.
+
+The Rust unit tests passed, release compilation succeeded, and the real artifact produced:
+
+```text
+wire_audit=PASS
+ciphers=22
+layers=44 base=44 product=0
+edges=1829 commitments=44
+unique_nonces=44 duplicate_nonces=0
+```
+
+The result matches the C++ parser and structural audit exactly. No endianness, integer-width, canonicalization, framing, or language-specific discrepancy was found.
+
 ## 12. Public proof/integrity issues and challenge applicability
 
 Public PVAC discussions report issues involving native-reset digests, proof binding, forged admissions, and noncanonical Ristretto handling. We evaluated whether those weaknesses could be composed into a confidentiality attack against this challenge.
