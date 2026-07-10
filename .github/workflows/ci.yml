@@ -27,7 +27,7 @@ jobs:
           bash -n scripts/*.sh
           python3 - <<'PY'
           import json, pathlib
-          for p in pathlib.Path('results').glob('*.json'):
+          for p in list(pathlib.Path('results').glob('*.json')) + list(pathlib.Path('results').glob('*.sarif')):
               json.loads(p.read_text())
           PY
           git diff --check

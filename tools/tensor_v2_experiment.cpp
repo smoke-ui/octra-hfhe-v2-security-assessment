@@ -29,7 +29,10 @@ static std::vector<double> sketch(const PubKey&pk,const Cipher&c){
   double gx[G];for(int g=0;g<G;g++){double z=0;for(int q=0;q<64;q++){size_t pos=mix(0x5349474d41000000ULL+g*131+q)%pk.prm.m_bits;int sb=bit(e.s,pos);int hb=bit(pk.H[(e.idx+g)%pk.H.size()],pos);z+=rsign(0x4847454f4dULL+g,pos)*(sb?1:-1)*(hb?1:-1);}gx[g]=z/8.0;}
   for(int i=0;i<I;i++)for(int w=0;w<W;w++)for(int g=0;g<G;g++)t[((a*I+i)*W+w)*G+g]+=ix[i]*wx[w]*gx[g];
  }
- for(int a=0;a<A;a++)if(cnt[a])for(int j=0;j<I*W*G;j++)t[a*I*W*G+j]/=sqrt((double)cnt[a]);return t;
+ for(int a=0;a<A;a++){
+  if(cnt[a])for(int j=0;j<I*W*G;j++)t[a*I*W*G+j]/=sqrt((double)cnt[a]);
+ }
+ return t;
 }
 static void row(std::ofstream&o,const std::string&src,int sample,int block,int label,const std::vector<double>&x){o<<src<<','<<sample<<','<<block<<','<<label;for(double v:x)o<<','<<v;o<<'\n';}
 int main(int ac,char**av){try{if(ac!=4){std::cerr<<"usage: extractor pk.bin secret.ct out.csv\n";return 2;}auto pb=rf(av[1]);auto pk=pvac_ser::deserialize_pubkey(pb.data(),pb.size());std::ofstream o(av[3]);o<<"source,sample,block,label";for(int i=0;i<2000;i++)o<<",x"<<i;o<<'\n';auto real=bundle(av[2]);for(size_t i=0;i<real.size();i++)row(o,"artifact",i,i,-1,sketch(pk,real[i]));
