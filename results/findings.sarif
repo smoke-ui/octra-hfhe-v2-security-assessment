@@ -17,11 +17,11 @@
         }
       },
       "results": [
-        {"ruleId":"OCTRA-HFHE-INFO-001","level":"note","message":{"text":"The 22-member bundle reveals 21 payload blocks and constrains plaintext length to 301–315 bytes."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"params.json"}}}]},
-        {"ruleId":"OCTRA-RELEASE-LOW-002","level":"warning","message":{"text":"README.md changed after its SHA256SUMS entry was published."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"SHA256SUMS"}}}]},
-        {"ruleId":"OCTRA-PVAC-LOW-003","level":"warning","message":{"text":"Bounds checks should compare requested length to remaining bytes before pointer addition."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"source/pvac_artifact_serialize.hpp"}}}]},
-        {"ruleId":"OCTRA-PVAC-LOW-004","level":"warning","message":{"text":"Reject noncanonical field encodings instead of masking the top bit."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"source/pvac_artifact_serialize.hpp"}}}]},
-        {"ruleId":"OCTRA-PVAC-INFO-005","level":"note","message":{"text":"Separate internal R_com proof state from the public wire-layer schema."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"source/pvac_artifact_serialize.hpp"}}}]}
+        {"ruleId":"OCTRA-HFHE-INFO-001","level":"note","message":{"text":"The 22-member bundle reveals 21 payload blocks and constrains plaintext length to 301–315 bytes."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/params.json"}}}]},
+        {"ruleId":"OCTRA-RELEASE-LOW-002","level":"warning","message":{"text":"README.md changed after its SHA256SUMS entry was published."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/SHA256SUMS"}}}]},
+        {"ruleId":"OCTRA-PVAC-LOW-003","level":"warning","message":{"text":"Bounds checks should compare requested length to remaining bytes before pointer addition."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"}}}]},
+        {"ruleId":"OCTRA-PVAC-LOW-004","level":"warning","message":{"text":"Reject noncanonical field encodings instead of masking the top bit."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"}}}]},
+        {"ruleId":"OCTRA-PVAC-INFO-005","level":"note","message":{"text":"Separate internal R_com proof state from the public wire-layer schema."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"}}}]}
       ]
     }
   ]
