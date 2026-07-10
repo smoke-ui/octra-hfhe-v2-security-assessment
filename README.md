@@ -6,7 +6,18 @@ Independent public-artifact cryptanalysis of [OCTRA Labs' HFHE Challenge v2](htt
 
 No public-only plaintext recovery was achieved. The assessment found no practical confidentiality break at the pinned challenge and PVAC commits. It confirms that v2 closes the public plaintext-guess oracle that broke v1, while documenting metadata leakage and implementation-hardening opportunities.
 
-Read the complete report: **[REPORT.md](REPORT.md)**
+Start with the **[executive summary](EXECUTIVE_SUMMARY.md)** or read the complete **[technical report](REPORT.md)**.
+
+Supporting guidance:
+
+- [Threat model](THREAT_MODEL.md)
+- [Standardized findings](FINDINGS.md)
+- [Experiment methodology](METHODOLOGY.md)
+- [How to evaluate cryptographic claims](CRYPTOGRAPHIC_CLAIMS_GUIDE.md)
+- [Limitations and falsification criteria](LIMITATIONS.md)
+- [Contributing](CONTRIBUTING.md)
+- [Code of conduct](CODE_OF_CONDUCT.md)
+- [Security and disclosure policy](SECURITY.md)
 
 ## Scope
 
@@ -46,10 +57,16 @@ Assessed versions:
 ## Repository layout
 
 ```text
-REPORT.md       Consolidated assessment and remediation guidance
-research/       Detailed algebra, RNG, subgroup, and algorithm notes
-tools/          Reproducible C++, Python, shell, and JavaScript probes
-results/        Machine-readable experiment summaries
+EXECUTIVE_SUMMARY.md  Short decision-maker overview
+REPORT.md             Consolidated technical assessment
+FINDINGS.md           Standardized finding cards
+THREAT_MODEL.md       Trust boundaries and attack blockers
+research/             Detailed algebra, RNG, subgroup, and algorithm notes
+tools/                Reproducible C++, Rust, Python, shell, and JavaScript probes
+scripts/              Setup, integrity verification, safe execution, and secret scan
+results/              Machine-readable findings and experiment summaries
+disclosure/           Vendor communication templates
+docs/                 Renderable diagrams
 ```
 
 ## Reproduction prerequisites
@@ -69,6 +86,25 @@ git -C pvac_hfhe_cpp checkout 071b0e909c119de815e284b347c4bd979cb59ef3
 ```
 
 Individual tools contain their own expected paths/arguments. Generated binaries, virtual environments, challenge wallet data, and challenge binary artifacts are intentionally excluded.
+
+## One-command reproduction
+
+```bash
+make setup
+make verify
+make test
+make run
+```
+
+`make setup` pins both upstream repositories and creates an isolated Python environment. `make verify` checks the challenge commit and artifact hashes. `make run` compiles native/Rust tools and writes safe outputs to `results/latest/`.
+
+Production tensor and broad invariant-discovery datasets are intentionally not regenerated in default CI because of their compute cost. Their checked result summaries remain under `results/`.
+
+## Machine-readable output
+
+- [`results/findings.json`](results/findings.json)
+- [`results/findings.sarif`](results/findings.sarif)
+- Experiment result JSON under [`results/`](results/)
 
 ## Disclosure posture
 

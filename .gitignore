@@ -15,9 +15,12 @@ target/
 *.zip
 .venv/
 .tensor-venv/
+.deps/
+.env.paths
 node_modules/
 __pycache__/
 *.pyc
+results/latest/
 
 # Secrets and wallet material
 *wallet*.txt
