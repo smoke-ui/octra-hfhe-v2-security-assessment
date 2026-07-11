@@ -1,0 +1,1856 @@
+{
+  "architecture": "x86_64",
+  "pins": {
+    "challenge": "0d08e9622921e5930175a660df0061a65548972f",
+    "pvac": "071b0e909c119de815e284b347c4bd979cb59ef3"
+  },
+  "rows": [
+    {
+      "expected_build_failure": false,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O0"
+      ],
+      "id": "gcc-O0-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "31a884be35d54d6116caa1bf8dce63d3a764f3f1ed443fb3164ef715c9722d8e"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "5beaac3f2db067ba31d9a3d6d0b07e04c7ac2597ed2da03a405a41b62adfee40"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "19199b61d5c0573cb313187561abb6fcf4ef8a084514b7013f331f5585c1a6db"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "dfeb943729578579eaf60166117206d3c55832c4ba4e20aa2cb626fdb9e86ed3"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "38df9c2b0aef11e1bbabe45c25ce17a7d0a95e324d1019b66af2b83e1454e8a2"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "ae9fec5f4f1359a2000955b09c49c706f40d9d435dfd1a7a7e1e3bb00ea24684"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O1"
+      ],
+      "id": "gcc-O1-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "31a884be35d54d6116caa1bf8dce63d3a764f3f1ed443fb3164ef715c9722d8e"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "5beaac3f2db067ba31d9a3d6d0b07e04c7ac2597ed2da03a405a41b62adfee40"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "19199b61d5c0573cb313187561abb6fcf4ef8a084514b7013f331f5585c1a6db"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "dfeb943729578579eaf60166117206d3c55832c4ba4e20aa2cb626fdb9e86ed3"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "38df9c2b0aef11e1bbabe45c25ce17a7d0a95e324d1019b66af2b83e1454e8a2"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "ae9fec5f4f1359a2000955b09c49c706f40d9d435dfd1a7a7e1e3bb00ea24684"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O2"
+      ],
+      "id": "gcc-O2-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "31a884be35d54d6116caa1bf8dce63d3a764f3f1ed443fb3164ef715c9722d8e"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "5beaac3f2db067ba31d9a3d6d0b07e04c7ac2597ed2da03a405a41b62adfee40"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "19199b61d5c0573cb313187561abb6fcf4ef8a084514b7013f331f5585c1a6db"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "dfeb943729578579eaf60166117206d3c55832c4ba4e20aa2cb626fdb9e86ed3"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "38df9c2b0aef11e1bbabe45c25ce17a7d0a95e324d1019b66af2b83e1454e8a2"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "ae9fec5f4f1359a2000955b09c49c706f40d9d435dfd1a7a7e1e3bb00ea24684"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O3"
+      ],
+      "id": "gcc-O3-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "31a884be35d54d6116caa1bf8dce63d3a764f3f1ed443fb3164ef715c9722d8e"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "5beaac3f2db067ba31d9a3d6d0b07e04c7ac2597ed2da03a405a41b62adfee40"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "19199b61d5c0573cb313187561abb6fcf4ef8a084514b7013f331f5585c1a6db"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "dfeb943729578579eaf60166117206d3c55832c4ba4e20aa2cb626fdb9e86ed3"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "38df9c2b0aef11e1bbabe45c25ce17a7d0a95e324d1019b66af2b83e1454e8a2"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "ae9fec5f4f1359a2000955b09c49c706f40d9d435dfd1a7a7e1e3bb00ea24684"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-Ofast"
+      ],
+      "id": "gcc-Ofast-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "31a884be35d54d6116caa1bf8dce63d3a764f3f1ed443fb3164ef715c9722d8e"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "5beaac3f2db067ba31d9a3d6d0b07e04c7ac2597ed2da03a405a41b62adfee40"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "19199b61d5c0573cb313187561abb6fcf4ef8a084514b7013f331f5585c1a6db"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "dfeb943729578579eaf60166117206d3c55832c4ba4e20aa2cb626fdb9e86ed3"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "38df9c2b0aef11e1bbabe45c25ce17a7d0a95e324d1019b66af2b83e1454e8a2"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "ae9fec5f4f1359a2000955b09c49c706f40d9d435dfd1a7a7e1e3bb00ea24684"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O2",
+        "-flto"
+      ],
+      "id": "gcc-O2-lto-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "31a884be35d54d6116caa1bf8dce63d3a764f3f1ed443fb3164ef715c9722d8e"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "5beaac3f2db067ba31d9a3d6d0b07e04c7ac2597ed2da03a405a41b62adfee40"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "19199b61d5c0573cb313187561abb6fcf4ef8a084514b7013f331f5585c1a6db"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "dfeb943729578579eaf60166117206d3c55832c4ba4e20aa2cb626fdb9e86ed3"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "38df9c2b0aef11e1bbabe45c25ce17a7d0a95e324d1019b66af2b83e1454e8a2"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "ae9fec5f4f1359a2000955b09c49c706f40d9d435dfd1a7a7e1e3bb00ea24684"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-O3",
+        "-march=native"
+      ],
+      "id": "gcc-O3-native",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "31a884be35d54d6116caa1bf8dce63d3a764f3f1ed443fb3164ef715c9722d8e"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "5beaac3f2db067ba31d9a3d6d0b07e04c7ac2597ed2da03a405a41b62adfee40"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "19199b61d5c0573cb313187561abb6fcf4ef8a084514b7013f331f5585c1a6db"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "dfeb943729578579eaf60166117206d3c55832c4ba4e20aa2cb626fdb9e86ed3"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "38df9c2b0aef11e1bbabe45c25ce17a7d0a95e324d1019b66af2b83e1454e8a2"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "ae9fec5f4f1359a2000955b09c49c706f40d9d435dfd1a7a7e1e3bb00ea24684"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "diagnostic": "ot declared in this scope\n  391 |     prg.init(toep_key, toep_nonce);\n      |     ^~~\nIn file included from /home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/keygen.hpp:9,\n                 from /home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/pvac.hpp:14:\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp: At global scope:\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp:12:5: error: \u2018AesCtr256\u2019 does not name a type\n   12 |     AesCtr256 prg;\n      |     ^~~~~~~~~\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp: In member function \u2018void pvac::SeedableRng::init(const uint8_t*)\u2019:\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp:15:9: error: \u2018prg\u2019 was not declared in this scope\n   15 |         prg.init(seed, 0);\n      |         ^~~\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp: In member function \u2018uint64_t pvac::SeedableRng::u64()\u2019:\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp:18:29: error: \u2018prg\u2019 was not declared in this scope\n   18 |     uint64_t u64() { return prg.next_u64(); }\n      |                             ^~~\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp: In member function \u2018uint64_t pvac::SeedableRng::bounded(uint64_t)\u2019:\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp:20:43: error: \u2018prg\u2019 was not declared in this scope\n   20 |     uint64_t bounded(uint64_t M) { return prg.bounded(M); }\n      |                                           ^~~\n",
+      "expected_build_failure": true,
+      "family": "gcc",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-O2",
+        "-march=x86-64",
+        "-mno-aes",
+        "-msse2"
+      ],
+      "id": "gcc-O2-minimum-noaes",
+      "returncode": 1,
+      "status": "build-failed"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O0"
+      ],
+      "id": "clang-O0-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "690dff44b651659987fa3b5cd47c38656b02b771a495c781a78188396ffe48e4"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "39ab64df7c813ad2498b6f029e96e55424fd9ce48a1341a8e816cb52cddefb94"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "64fe220189caff3c12effdfabaa7206b383c926d0a3eebc37feb1a9a60932e4a"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "30535d6396e11d088fd261a8c4c2d1e44a2ae3f1b534a362e49fe66167ea3cfa"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "598297165229758662bf78b6608e54afa560ee22e317246ed10e8c265a74ec62"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "2b72520f97775f27fb1e00bb0710496f66d6f76e62352d088ca78dc1736effe4"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O1"
+      ],
+      "id": "clang-O1-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "690dff44b651659987fa3b5cd47c38656b02b771a495c781a78188396ffe48e4"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "39ab64df7c813ad2498b6f029e96e55424fd9ce48a1341a8e816cb52cddefb94"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "64fe220189caff3c12effdfabaa7206b383c926d0a3eebc37feb1a9a60932e4a"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "30535d6396e11d088fd261a8c4c2d1e44a2ae3f1b534a362e49fe66167ea3cfa"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "598297165229758662bf78b6608e54afa560ee22e317246ed10e8c265a74ec62"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "2b72520f97775f27fb1e00bb0710496f66d6f76e62352d088ca78dc1736effe4"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O2"
+      ],
+      "id": "clang-O2-aes",
+      "repeatable": false,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "690dff44b651659987fa3b5cd47c38656b02b771a495c781a78188396ffe48e4"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "39ab64df7c813ad2498b6f029e96e55424fd9ce48a1341a8e816cb52cddefb94"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "d6c5185601bf2335767474bca626418612fb543e3b417ccccfefd42d0ab4c56f"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "30535d6396e11d088fd261a8c4c2d1e44a2ae3f1b534a362e49fe66167ea3cfa"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "598297165229758662bf78b6608e54afa560ee22e317246ed10e8c265a74ec62"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "2b72520f97775f27fb1e00bb0710496f66d6f76e62352d088ca78dc1736effe4"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O3"
+      ],
+      "id": "clang-O3-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "690dff44b651659987fa3b5cd47c38656b02b771a495c781a78188396ffe48e4"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "39ab64df7c813ad2498b6f029e96e55424fd9ce48a1341a8e816cb52cddefb94"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "0fad58a3b3349dddfd123a8528d1353d23b2b8d2537af7c1e5295ae13867ac07"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "30535d6396e11d088fd261a8c4c2d1e44a2ae3f1b534a362e49fe66167ea3cfa"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "598297165229758662bf78b6608e54afa560ee22e317246ed10e8c265a74ec62"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "2b72520f97775f27fb1e00bb0710496f66d6f76e62352d088ca78dc1736effe4"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-Ofast"
+      ],
+      "id": "clang-Ofast-aes",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "690dff44b651659987fa3b5cd47c38656b02b771a495c781a78188396ffe48e4"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "39ab64df7c813ad2498b6f029e96e55424fd9ce48a1341a8e816cb52cddefb94"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "0fad58a3b3349dddfd123a8528d1353d23b2b8d2537af7c1e5295ae13867ac07"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "30535d6396e11d088fd261a8c4c2d1e44a2ae3f1b534a362e49fe66167ea3cfa"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "598297165229758662bf78b6608e54afa560ee22e317246ed10e8c265a74ec62"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "2b72520f97775f27fb1e00bb0710496f66d6f76e62352d088ca78dc1736effe4"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-march=x86-64",
+        "-maes",
+        "-msse2",
+        "-O2",
+        "-flto"
+      ],
+      "id": "clang-O2-lto-aes",
+      "repeatable": false,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "690dff44b651659987fa3b5cd47c38656b02b771a495c781a78188396ffe48e4"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "39ab64df7c813ad2498b6f029e96e55424fd9ce48a1341a8e816cb52cddefb94"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "003e16415231732183332b51fe6f5dca2b7ecc4bb01c23c5f57a0951bbdb253a"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "30535d6396e11d088fd261a8c4c2d1e44a2ae3f1b534a362e49fe66167ea3cfa"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "598297165229758662bf78b6608e54afa560ee22e317246ed10e8c265a74ec62"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "2b72520f97775f27fb1e00bb0710496f66d6f76e62352d088ca78dc1736effe4"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "expected_build_failure": false,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-O3",
+        "-march=native"
+      ],
+      "id": "clang-O3-native",
+      "repeatable": true,
+      "semantic": {
+        "ciphertexts": [
+          {
+            "bytes": 41953,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  7,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "690dff44b651659987fa3b5cd47c38656b02b771a495c781a78188396ffe48e4"
+          },
+          {
+            "bytes": 47308,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  5,
+                  0
+                ]
+              ],
+              "edges": 44,
+              "layers": 2,
+              "slots": 1
+            },
+            "sha256": "39ab64df7c813ad2498b6f029e96e55424fd9ce48a1341a8e816cb52cddefb94"
+          },
+          {
+            "bytes": 43361,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ],
+                [
+                  11,
+                  0
+                ]
+              ],
+              "edges": 39,
+              "layers": 2,
+              "slots": 3
+            },
+            "sha256": "0fad58a3b3349dddfd123a8528d1353d23b2b8d2537af7c1e5295ae13867ac07"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  12,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "30535d6396e11d088fd261a8c4c2d1e44a2ae3f1b534a362e49fe66167ea3cfa"
+          },
+          {
+            "bytes": 89207,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  2,
+                  0
+                ]
+              ],
+              "edges": 83,
+              "layers": 4,
+              "slots": 1
+            },
+            "sha256": "598297165229758662bf78b6608e54afa560ee22e317246ed10e8c265a74ec62"
+          },
+          {
+            "bytes": 34654,
+            "fact": {
+              "compatible": true,
+              "dec": [
+                [
+                  35,
+                  0
+                ]
+              ],
+              "edges": 32,
+              "layers": 8,
+              "slots": 1
+            },
+            "sha256": "2b72520f97775f27fb1e00bb0710496f66d6f76e62352d088ca78dc1736effe4"
+          }
+        ],
+        "pubkey": {
+          "bytes": 3019303,
+          "sha256": "38e8d4f0c1282cd5b8701cc554d09324d27b179c416843b953921586ec03424c"
+        },
+        "schema": 1
+      },
+      "status": "ok"
+    },
+    {
+      "diagnostic": "In file included from /home/jackm/octra/octra-hfhe-v2-security-assessment/tools/compiler-differential/fixture.cpp:1:\nIn file included from /home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/pvac.hpp:13:\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/lpn.hpp:294:2: error: \"hfhe requires hardware AES support (x86_64 with -maes or aarch64 with crypto extensions)\"\n  294 | #error \"hfhe requires hardware AES support (x86_64 with -maes or aarch64 with crypto extensions)\"\n      |  ^\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/lpn.hpp:350:5: error: unknown type name 'AesCtr256'\n  350 |     AesCtr256 prg;\n      |     ^\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/lpn.hpp:390:5: error: unknown type name 'AesCtr256'\n  390 |     AesCtr256 prg;\n      |     ^\nIn file included from /home/jackm/octra/octra-hfhe-v2-security-assessment/tools/compiler-differential/fixture.cpp:1:\nIn file included from /home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/pvac.hpp:14:\nIn file included from /home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/keygen.hpp:9:\n/home/jackm/octra/octra-hfhe-v2-security-assessment/.deps/pvac_hfhe_cpp/include/pvac/crypto/../core/seedable_rng.hpp:12:5: error: unknown type name 'AesCtr256'\n   12 |     AesCtr256 prg;\n      |     ^\n4 errors generated.\n",
+      "expected_build_failure": true,
+      "family": "clang",
+      "flags": [
+        "-std=c++17",
+        "-pthread",
+        "-O2",
+        "-march=x86-64",
+        "-mno-aes",
+        "-msse2"
+      ],
+      "id": "clang-O2-minimum-noaes",
+      "returncode": 1,
+      "status": "build-failed"
+    }
+  ],
+  "schema": 1,
+  "summary": {
+    "baseline_sha256": "26d3a1765e85a44ab8be0aadfd1c60024eba8f2ba1d4802837e67f40ff13f5e8",
+    "expected_build_failures": [
+      "gcc-O2-minimum-noaes",
+      "clang-O2-minimum-noaes"
+    ],
+    "nondeterministic_variants": [
+      "clang-O2-aes",
+      "clang-O2-lto-aes"
+    ],
+    "observed_fact_differentials": [],
+    "pass": false,
+    "serialization_differentials": [
+      "clang-O0-aes",
+      "clang-O1-aes",
+      "clang-O2-aes",
+      "clang-O3-aes",
+      "clang-Ofast-aes",
+      "clang-O2-lto-aes",
+      "clang-O3-native"
+    ],
+    "successful_variants": 14,
+    "unexpected_failures": []
+  }
+}

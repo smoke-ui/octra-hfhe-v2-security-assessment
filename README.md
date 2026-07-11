@@ -15,6 +15,8 @@ Supporting guidance:
 - [Experiment methodology](METHODOLOGY.md)
 - [How to evaluate cryptographic claims](CRYPTOGRAPHIC_CLAIMS_GUIDE.md)
 - [Limitations and falsification criteria](LIMITATIONS.md)
+- [Phase II deep-testing plan](research/PHASE2_DEEP_TESTING_PLAN.md)
+- [Phase II lab log](research/PHASE2_LAB_LOG.md)
 - [Contributing](CONTRIBUTING.md)
 - [Code of conduct](CODE_OF_CONDUCT.md)
 - [Security and disclosure policy](SECURITY.md)
@@ -35,6 +37,7 @@ Assessed versions:
 - `SHA256SUMS` contains a stale checksum for the subsequently edited README.
 - Deserialization bounds and canonicalization can be hardened.
 - `R_com` has an ambiguous internal-versus-wire lifecycle.
+- Concurrent first use races on lazy Toeplitz dispatch (`pvac::g_toep`).
 
 ## Reviewed non-findings
 

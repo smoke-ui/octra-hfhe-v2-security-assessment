@@ -78,6 +78,36 @@
       ],
       "impact": "Maintenance risk across proof and wire representations",
       "recommendation": "Separate wire-layer and proof-layer types"
+    },
+    {
+      "id": "OCTRA-PVAC-MED-006",
+      "title": "Lazy Toeplitz dispatch has a first-use data race",
+      "severity": "medium",
+      "confidence": "high",
+      "affected_repository": "octra-labs/pvac_hfhe_cpp",
+      "affected_commit": "071b0e909c119de815e284b347c4bd979cb59ef3",
+      "affected_artifact": "include/pvac/crypto/toeplitz.hpp",
+      "evidence": [
+        "research/PHASE2_LAB_LOG.md",
+        "tools/runtime-probes/concurrency_probe.cpp"
+      ],
+      "impact": "Undefined behavior during concurrent first use of Toeplitz dispatch",
+      "recommendation": "Use call_once, function-local static initialization, or correctly ordered atomic publication"
+    },
+    {
+      "id": "OCTRA-PVAC-LOW-007",
+      "title": "Direct object parsers accept trailing bytes",
+      "severity": "low",
+      "confidence": "high",
+      "affected_repository": "octra-labs/hfhe-challenge",
+      "affected_commit": "0d08e9622921e5930175a660df0061a65548972f",
+      "affected_artifact": "source/pvac_artifact_serialize.hpp",
+      "evidence": [
+        "research/PHASE2_LAB_LOG.md",
+        "tools/structured-fuzz/structured_runner.cpp"
+      ],
+      "impact": "Noncanonical aliases and parser-boundary ambiguity",
+      "recommendation": "Require zero remaining bytes at top-level direct deserialization boundaries"
     }
   ]
 }
