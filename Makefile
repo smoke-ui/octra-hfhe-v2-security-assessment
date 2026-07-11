@@ -1,6 +1,7 @@
 SHELL := /usr/bin/env bash
+PYTHON := $(if $(wildcard .venv/bin/python),.venv/bin/python,python3)
 
-.PHONY: setup verify test run lint clean
+.PHONY: setup verify verify-mobius test run lint clean
 
 setup:
 	./scripts/setup.sh
@@ -8,10 +9,17 @@ setup:
 verify:
 	./scripts/verify-artifacts.sh
 
+verify-mobius:
+	./scripts/verify-mobius.sh
+
 test:
 	cd tools/rust-wire-audit && cargo test
-	python3 -m unittest -v tools/lpn-samples-audit/test_audit.py
-	python3 -m compileall -q tools scripts
+	$(PYTHON) -m unittest -v tools/lpn-samples-audit/test_audit.py
+	$(PYTHON) -m unittest -v tools/mobius-sequencing/test_mobius.py
+	$(PYTHON) -m unittest -v tools/mobius-sequencing/test_lpn_experiment.py
+	$(PYTHON) -m unittest -v tools/mobius-sequencing/test_field_experiment.py
+	$(PYTHON) -m unittest -v tools/mobius-sequencing/test_hypergraph_experiment.py
+	$(PYTHON) -m compileall -q tools scripts
 	bash -n scripts/*.sh
 
 run:

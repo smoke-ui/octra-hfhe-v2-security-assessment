@@ -513,6 +513,24 @@ research/OCTRA_LPN_PRACTICAL_ASSESSMENT.md
 tools/lpn-samples-audit/
 ```
 
+### 14.6 Möbius sequencing and non-orientable controls
+
+A dedicated follow-up made the earlier “4D” hypothesis explicit rather than treating geometry metaphorically. It tested three independent constructions: a 720,896-element Möbius double cover of the `22 × 2` LPN grid; 224 fractional-linear maps over `P¹(F_p)` plus all 336 nonzero order-337 coordinate twists; and 793 degree-≤4 Boolean-lattice coefficients with globally parity-constrained cylinder/Möbius incidence cycles.
+
+No tested family produced a surviving signal. The six LPN families had Holm-adjusted p-values from `0.72` to `1.0`; the exhaustive seam family covered all `22 × 2 × 16,384 = 720,896` alignments. Exact field tests found no reversal, coordinate-twist, full Möbius-map, core-map, or fixed cross-ratio relation across 22 wrapped pairs. Every pair retained 337 unique seam ratios and 337 unique `x^337` quotient labels. The corrected global-cycle topology diagnostic slightly preferred the cylinder (`0.077993399` versus `0.080346359`), but its gap and holonomy family-max p-values were `1.0`.
+
+Planted inversion and global-parity controls were detected. The artifact topology remains analyst-imposed and unlabeled; the null result is neither a proof against every possible “Möbius” construction nor evidence of intrinsic ciphertext geometry. It supplies no plaintext, PRF-key, or LPN-secret recovery path.
+
+Supporting artifacts:
+
+```text
+research/OCTRA_MOBIUS_SEQUENCING_ASSESSMENT.md
+tools/mobius-sequencing/
+results/lpn-mobius.json
+results/field-mobius.json
+results/hypergraph-mobius.json
+```
+
 ## 15. Recommendations
 
 1. Preserve the two-layer independently masked wrapper.

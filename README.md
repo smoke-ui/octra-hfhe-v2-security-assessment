@@ -20,6 +20,7 @@ Supporting guidance:
 - [Section 10 historical-peg deep audit](research/S10_PEG_DEEP_AUDIT.md)
 - [Cross-generation composition assessment](research/CROSS_GENERATION_COMPOSITION_ASSESSMENT.md)
 - [July 11 published-LPN practical assessment](research/OCTRA_LPN_PRACTICAL_ASSESSMENT.md)
+- [Möbius sequencing and projective-map assessment](research/OCTRA_MOBIUS_SEQUENCING_ASSESSMENT.md)
 - [Contributing](CONTRIBUTING.md)
 - [Code of conduct](CODE_OF_CONDUCT.md)
 - [Security and disclosure policy](SECURITY.md)
@@ -121,6 +122,9 @@ Production tensor and broad invariant-discovery datasets are intentionally not r
 - [`results/findings.json`](results/findings.json)
 - [`results/findings.sarif`](results/findings.sarif)
 - [`tools/lpn-samples-audit/results/lpn-samples.json`](tools/lpn-samples-audit/results/lpn-samples.json)
+- [`results/lpn-mobius.json`](results/lpn-mobius.json)
+- [`results/field-mobius.json`](results/field-mobius.json)
+- [`results/hypergraph-mobius.json`](results/hypergraph-mobius.json)
 - Experiment result JSON under [`results/`](results/)
 
 ## Disclosure posture
