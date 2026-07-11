@@ -8,20 +8,198 @@
           "name": "octra-hfhe-v2-security-assessment",
           "informationUri": "https://github.com/smoke-ui/octra-hfhe-v2-security-assessment",
           "rules": [
-            {"id":"OCTRA-HFHE-INFO-001","shortDescription":{"text":"Ciphertext count leaks a narrow plaintext-length interval"},"defaultConfiguration":{"level":"note"}},
-            {"id":"OCTRA-RELEASE-LOW-002","shortDescription":{"text":"Stale documentation checksum"},"defaultConfiguration":{"level":"warning"}},
-            {"id":"OCTRA-PVAC-LOW-003","shortDescription":{"text":"Pointer-addition bounds check can be hardened"},"defaultConfiguration":{"level":"warning"}},
-            {"id":"OCTRA-PVAC-LOW-004","shortDescription":{"text":"Noncanonical field encodings are normalized"},"defaultConfiguration":{"level":"warning"}},
-            {"id":"OCTRA-PVAC-INFO-005","shortDescription":{"text":"Ambiguous R_com internal/wire lifecycle"},"defaultConfiguration":{"level":"note"}}
+            {
+              "id": "OCTRA-HFHE-INFO-001",
+              "shortDescription": {
+                "text": "Ciphertext count leaks a narrow plaintext-length interval"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            },
+            {
+              "id": "OCTRA-RELEASE-LOW-002",
+              "shortDescription": {
+                "text": "Stale documentation checksum"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "OCTRA-PVAC-LOW-003",
+              "shortDescription": {
+                "text": "Pointer-addition bounds check can be hardened"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "OCTRA-PVAC-LOW-004",
+              "shortDescription": {
+                "text": "Noncanonical field encodings are normalized"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "OCTRA-PVAC-INFO-005",
+              "shortDescription": {
+                "text": "Ambiguous R_com internal/wire lifecycle"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            },
+            {
+              "id": "OCTRA-PVAC-MED-006",
+              "shortDescription": {
+                "text": "Lazy Toeplitz dispatch has a first-use data race"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "OCTRA-PVAC-LOW-007",
+              "shortDescription": {
+                "text": "Direct object parsers accept trailing bytes"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            }
           ]
         }
       },
       "results": [
-        {"ruleId":"OCTRA-HFHE-INFO-001","level":"note","message":{"text":"The 22-member bundle reveals 21 payload blocks and constrains plaintext length to 301–315 bytes."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/secret.ct"}}}],"relatedLocations":[{"id":1,"message":{"text":"Pinned enc_text framing implementation"},"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/pvac_hfhe_cpp/071b0e909c119de815e284b347c4bd979cb59ef3/include/pvac/utils/text.hpp"}}}]},
-        {"ruleId":"OCTRA-RELEASE-LOW-002","level":"warning","message":{"text":"README.md changed after its SHA256SUMS entry was published."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/SHA256SUMS"}}}]},
-        {"ruleId":"OCTRA-PVAC-LOW-003","level":"warning","message":{"text":"Bounds checks should compare requested length to remaining bytes before pointer addition."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"}}}]},
-        {"ruleId":"OCTRA-PVAC-LOW-004","level":"warning","message":{"text":"Reject noncanonical field encodings instead of masking the top bit."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"}}}]},
-        {"ruleId":"OCTRA-PVAC-INFO-005","level":"note","message":{"text":"Separate internal R_com proof state from the public wire-layer schema."},"locations":[{"physicalLocation":{"artifactLocation":{"uri":"https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"}}}]}
+        {
+          "ruleId": "OCTRA-HFHE-INFO-001",
+          "level": "note",
+          "message": {
+            "text": "The 22-member bundle reveals 21 payload blocks and constrains plaintext length to 301\u2013315 bytes."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/secret.ct"
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "id": 1,
+              "message": {
+                "text": "Pinned enc_text framing implementation"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/pvac_hfhe_cpp/071b0e909c119de815e284b347c4bd979cb59ef3/include/pvac/utils/text.hpp"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OCTRA-RELEASE-LOW-002",
+          "level": "warning",
+          "message": {
+            "text": "README.md changed after its SHA256SUMS entry was published."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/SHA256SUMS"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OCTRA-PVAC-LOW-003",
+          "level": "warning",
+          "message": {
+            "text": "Bounds checks should compare requested length to remaining bytes before pointer addition."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OCTRA-PVAC-LOW-004",
+          "level": "warning",
+          "message": {
+            "text": "Reject noncanonical field encodings instead of masking the top bit."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OCTRA-PVAC-INFO-005",
+          "level": "note",
+          "message": {
+            "text": "Separate internal R_com proof state from the public wire-layer schema."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OCTRA-PVAC-MED-006",
+          "level": "error",
+          "message": {
+            "text": "ThreadSanitizer reports an unsynchronized read/write race on pvac::g_toep during concurrent first use."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/pvac_hfhe_cpp/071b0e909c119de815e284b347c4bd979cb59ef3/include/pvac/crypto/toeplitz.hpp"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OCTRA-PVAC-LOW-007",
+          "level": "warning",
+          "message": {
+            "text": "Direct object deserializers accept trailing bytes; require complete input consumption."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "https://raw.githubusercontent.com/octra-labs/hfhe-challenge/0d08e9622921e5930175a660df0061a65548972f/source/pvac_artifact_serialize.hpp"
+                }
+              }
+            }
+          ]
+        }
       ]
     }
   ]

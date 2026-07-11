@@ -51,3 +51,23 @@ These findings concern OCTRA's pinned upstream challenge package and source, not
 - **Impact:** Maintenance risk; future code may assume deserialized state retains internal proof metadata
 - **Remediation:** Separate wire and proof-layer types with explicit schema versions
 - **Regression:** Assert public serializers never emit candidate-checkable mask commitments
+
+## OCTRA-PVAC-MED-006 — Lazy Toeplitz dispatch has a first-use data race
+
+- **Severity:** Medium
+- **Upstream provenance:** `octra-labs/pvac_hfhe_cpp@071b0e909c119de815e284b347c4bd979cb59ef3`
+- **Affected component:** `pvac::g_toep` initialization in `crypto/toeplitz.hpp`
+- **Evidence:** ThreadSanitizer reports a concurrent write in `select_toeplitz()` at line 249 and read in `toep_127()` at line 265
+- **Impact:** Undefined behavior during concurrent first use; the bounded stress control did not observe a wrong result, but safe function-pointer publication is not guaranteed by the C++ memory model
+- **Remediation:** Initialize through `std::call_once`, a function-local static, or a correctly ordered atomic publication scheme
+- **Regression:** Start multiple threads behind a barrier, invoke `toep_127()` before any serial warmup, and require a clean TSan run
+
+## OCTRA-PVAC-LOW-007 — Direct object parsers accept trailing bytes
+
+- **Severity:** Low
+- **Upstream provenance:** pinned challenge serializer source
+- **Affected component:** Direct `deserialize_cipher` and `deserialize_pubkey` entry points
+- **Evidence:** Generated-fixture direct-object suffixes parse successfully, decrypt unchanged, and fail canonical reserialization equality; bundle-level trailing bytes are rejected
+- **Impact:** Noncanonical aliases and parser-boundary ambiguity when callers use direct object entry points
+- **Remediation:** Require `Reader::remaining() == 0` at every top-level deserialization boundary
+- **Regression:** Direct object parsers reject one-byte and multi-byte suffix fixtures
