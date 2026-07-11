@@ -476,6 +476,43 @@ wallet_entropy_bruteforce.mjs
 
 This route becomes practical only if generation entropy was weak, biased, truncated, reused, or human-selected. Historical/source review found OS CSPRNG generation and no evidence of those failures.
 
+### 14.5 July 11 published LPN side target
+
+Challenge commit `d9d29d505e2840c0028d7a91a2a8ba59e163b9a4` added 44 JSONL files associated with the live ciphertext; follow-up `019380c97543620091409b0fbf73a8a773a9a0da` clarified that recovering `S` is an additional cryptanalysis target, while the bounty condition remains plaintext/wallet recovery.
+
+The files contain 22 ciphertexts × two base layers × 16,384 equations:
+
+```text
+n                         4,096
+noise                     Bernoulli(1/8)
+files                     44
+samples per file          16,384
+total samples             720,896
+samples per secret bit    176
+```
+
+The pinned PVAC source has one dense 4,096-bit `SecKey::lpn_s_bits`, sampled once at key generation and consumed by every `lpn_make_ybits()` invocation. Under the publisher/source model, all 44 files should therefore be concatenated as a same-secret LPN instance. Every file checksum and metadata binding passed. An exhaustive structural audit found:
+
+- 720,896/720,896 unique `A` rows and unique `(A,y)` pairs;
+- 44/44 unique seed/nonce/public-aggregate tuples;
+- full `rank(A)=4096` and `rank([A|y])=4097` in every file;
+- aggregate `A` bit fraction `0.4999853779` (`z=-1.5891`);
+- aggregate `y` bit fraction `0.4996892756` (`z=-0.5276`);
+
+The extra data materially improves the LPN side target from 4 to 176 samples per secret bit, but no tested generic route became practical. Direct Gaussian elimination amplifies noise; no repeated rows exist for majority voting; one 16-bit bucket-cancellation stage leaves mean residual row weight `2039.62` versus the random expectation `2040`; repeated BKW additions rapidly reduce bias; direct Walsh search remains exponential in an unreduced dimension; and naive clean-subset decoding has an approximately `2^918.25` trial exponent for one file. Restricted-sample coded-BKW remains the best next algorithm family to parameterize, not a demonstrated break.
+
+Two qualifications are decisive:
+
+1. Recovering `S` alone does not recover the independent 256-bit `prf_k`, the secret Toeplitz streams, the other PRF domains, or the complete `R=r1*r2*r3`; it does not directly decrypt `secret.ct`.
+2. OCTRA's supplied verifier reads only the first metadata line and checks existential membership of `(seed_ztag, nonce, public_T)` among base-layer targets. It never parses or authenticates the equation body, claimed coordinates, dimensions, or noise parameters. The checksum manifest commits the publisher to the files, but the release includes no public generator proving that each `(A,y)` body came from the pinned secret-key computation.
+
+Supporting artifacts:
+
+```text
+research/OCTRA_LPN_PRACTICAL_ASSESSMENT.md
+tools/lpn-samples-audit/
+```
+
 ## 15. Recommendations
 
 1. Preserve the two-layer independently masked wrapper.
@@ -488,7 +525,9 @@ This route becomes practical only if generation entropy was weak, biased, trunca
 8. Add release CI that regenerates and verifies `SHA256SUMS` after documentation changes.
 9. Publish a formal security argument for the wrapper and clearly state its assumptions.
 10. Distinguish entropy estimates from concrete LPN attack-cost estimates in documentation.
-11. Maintain dedicated tests for:
+11. Publish a full LPN sample-body provenance path: a generator or authenticated transcript plus a verifier that checks every row, index, coordinate, dimension, and parameter—not only first-line metadata.
+12. Evaluate the released same-secret sample budget with a named restricted-sample coded-BKW/ISD estimator and validate any proposed parameters on planted reduced-dimension controls.
+13. Maintain dedicated tests for:
     - v1 candidate-guess oracle regression
     - wrapped-zero indistinguishability
     - nonce uniqueness
