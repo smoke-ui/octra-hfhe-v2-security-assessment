@@ -19,6 +19,8 @@ test:
 	$(PYTHON) -m unittest -v tools/mobius-sequencing/test_lpn_experiment.py
 	$(PYTHON) -m unittest -v tools/mobius-sequencing/test_field_experiment.py
 	$(PYTHON) -m unittest -v tools/mobius-sequencing/test_hypergraph_experiment.py
+	$(PYTHON) -m unittest -v tools/lpn-lattice-sequence/test_bkw_experiment.py
+	$(PYTHON) -m unittest -v tools/lpn-lattice-sequence/test_lattice_experiment.py
 	$(PYTHON) -m compileall -q tools scripts
 	bash -n scripts/*.sh
 
