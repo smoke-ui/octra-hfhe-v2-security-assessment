@@ -123,6 +123,7 @@ Production tensor and broad invariant-discovery datasets are intentionally not r
 - [`results/findings.sarif`](results/findings.sarif)
 - [`tools/lpn-samples-audit/results/lpn-samples.json`](tools/lpn-samples-audit/results/lpn-samples.json)
 - [`results/lpn-mobius.json`](results/lpn-mobius.json)
+- [`results/lpn-bkw.json`](results/lpn-bkw.json) — deterministic exact bucket cancellation, all-construction-row LSH, and bounded disjoint-shard MITM on 589,824 pinned construction equations. Exact bucket cancellation retains 293,889 then 145,936 equations and reaches residual weight 1,896 (matched random control: 1,894). LSH reaches 1,868 after 10,615,133 comparison evaluations with repeats (used as a conservative candidate-count upper bound; exact unique count was not retained; control: 1,877). MITM reaches 1,918 for triples (3,964 projected matches) and 1,898 for quadruples (1,048,508 projected matches); controls are 1,939 and 1,893. All four executed families are `bounded_null` under Bonferroni alpha 0.0025 and the capped global union bound is 1; none is computationally actionable.
 - [`results/field-mobius.json`](results/field-mobius.json)
 - [`results/hypergraph-mobius.json`](results/hypergraph-mobius.json)
 - Experiment result JSON under [`results/`](results/)
