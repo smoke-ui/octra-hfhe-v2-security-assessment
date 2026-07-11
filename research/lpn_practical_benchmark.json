@@ -1,0 +1,26 @@
+{
+  "bucket_bits": 16,
+  "distinct_public_T": 44,
+  "distinct_seed_tuples": 44,
+  "duplicate_A_sha256": 0,
+  "files": 44,
+  "n_values": [
+    4096
+  ],
+  "occupied_buckets": 65536,
+  "rows_scanned": 720896,
+  "same_bucket_pair_events": 655360,
+  "t_values": [
+    16384
+  ],
+  "tau": [
+    [
+      1,
+      8
+    ]
+  ],
+  "xor_weight_mean_first_10000": 2039.6221,
+  "xor_weight_sd_first_10000": 32.34264200077044,
+  "y_fraction": 0.4996892755681818,
+  "y_ones": 360224
+}

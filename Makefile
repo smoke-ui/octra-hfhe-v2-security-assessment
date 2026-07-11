@@ -10,6 +10,7 @@ verify:
 
 test:
 	cd tools/rust-wire-audit && cargo test
+	python3 -m unittest -v tools/lpn-samples-audit/test_audit.py
 	python3 -m compileall -q tools scripts
 	bash -n scripts/*.sh
 

@@ -19,6 +19,7 @@ Supporting guidance:
 - [Phase II lab log](research/PHASE2_LAB_LOG.md)
 - [Section 10 historical-peg deep audit](research/S10_PEG_DEEP_AUDIT.md)
 - [Cross-generation composition assessment](research/CROSS_GENERATION_COMPOSITION_ASSESSMENT.md)
+- [July 11 published-LPN practical assessment](research/OCTRA_LPN_PRACTICAL_ASSESSMENT.md)
 - [Contributing](CONTRIBUTING.md)
 - [Code of conduct](CODE_OF_CONDUCT.md)
 - [Security and disclosure policy](SECURITY.md)
@@ -30,6 +31,8 @@ This repository covers only OCTRA's explicitly public cryptographic challenge an
 Assessed versions:
 
 - Challenge: `0d08e9622921e5930175a660df0061a65548972f`
+- LPN sample release: `d9d29d505e2840c0028d7a91a2a8ba59e163b9a4`
+- LPN scope clarification: `019380c97543620091409b0fbf73a8a773a9a0da`
 - PVAC: `071b0e909c119de815e284b347c4bd979cb59ef3`
 - `secret.ct`: `5da7f82724838bf7a8c4fe95fbf6d573b621c04c9b2f7ae849545cf60223fbab`
 
@@ -44,6 +47,11 @@ Assessed versions:
 ## Reviewed non-findings
 
 - Publicly reported proof/integrity issues in other PVAC paths were reviewed, but the required proof/reset objects are absent from `secret.ct`; no composition into challenge plaintext recovery was demonstrated.
+- OCTRA's 44 added LPN files expose 720,896 equations against the source-supported shared 4096-bit `S`. No duplicate rows, rank shortcut, anomalous bias, or practical commodity-hardware recovery route was found. Recovering `S` would still leave the independent 256-bit `prf_k` and does not directly decrypt the payload.
+
+## Publication caveat
+
+- OCTRA's supplied LPN verifier proves only that each file's first-line seed/nonce/public-aggregate metadata matches a base layer in `secret.ct`. It does not parse or authenticate the 720,896 equation bodies. The repository checksum manifest commits OCTRA to the published bytes, but no public generator independently proves those bodies came from the pinned private-key computation.
 
 ## Attack classes tested
 
@@ -112,6 +120,7 @@ Production tensor and broad invariant-discovery datasets are intentionally not r
 
 - [`results/findings.json`](results/findings.json)
 - [`results/findings.sarif`](results/findings.sarif)
+- [`tools/lpn-samples-audit/results/lpn-samples.json`](tools/lpn-samples-audit/results/lpn-samples.json)
 - Experiment result JSON under [`results/`](results/)
 
 ## Disclosure posture
