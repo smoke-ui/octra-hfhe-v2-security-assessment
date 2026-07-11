@@ -265,6 +265,14 @@ The implementation uses Linux `getrandom(2)` with `/dev/urandom` fallback. No ti
 
 Earlier v2 artifacts used different keys and ciphertexts, so they do not create a same-key related-plaintext pair.
 
+### 10.1 Deep peg correlation and composition follow-up
+
+A follow-up audit treated the three generation commits as explicit historical pegs and tested weaker relations that exact intersection checks can miss. The work covered partial nonce reuse, nearest-neighbor Hamming distributions with min-of-many null controls, a 50,000-trial Monte Carlo label-permutation test for commitment proximity (plus-one p-value estimator; resolution `1/50,001`), public-matrix and UBK correlation, edge distributions, subgroup alignment, all 337 character coordinates across all 80 historical layers, and cross-key algebraic composition.
+
+No repeated nonce halves or 32-bit boundaries were found. Nearest-neighbor results matched their corrected null controls. Public `H` agreement matched the implementation's 192/193 mixed-weight sparse-column model, and the UBK/edge statistics were consistent with independent generation. Although all keys share the unique public order-337 subgroup, an exhaustive aligned scan of 26,960 character values found no exact zero, coordinate collision, quotient collision, wrapped-ratio collision, or normalized-signature collision.
+
+No historical RNG-state reuse, same-mask equation, or cross-key plaintext/key-recovery route was demonstrated. The full methodology and limitations are in [`research/S10_PEG_DEEP_AUDIT.md`](research/S10_PEG_DEEP_AUDIT.md) and [`research/CROSS_GENERATION_COMPOSITION_ASSESSMENT.md`](research/CROSS_GENERATION_COMPOSITION_ASSESSMENT.md).
+
 ## 11. C++ and serialization robustness findings
 
 ### 11.1 Pointer-arithmetic robustness

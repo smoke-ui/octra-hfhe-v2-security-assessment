@@ -17,6 +17,8 @@ Supporting guidance:
 - [Limitations and falsification criteria](LIMITATIONS.md)
 - [Phase II deep-testing plan](research/PHASE2_DEEP_TESTING_PLAN.md)
 - [Phase II lab log](research/PHASE2_LAB_LOG.md)
+- [Section 10 historical-peg deep audit](research/S10_PEG_DEEP_AUDIT.md)
+- [Cross-generation composition assessment](research/CROSS_GENERATION_COMPOSITION_ASSESSMENT.md)
 - [Contributing](CONTRIBUTING.md)
 - [Code of conduct](CODE_OF_CONDUCT.md)
 - [Security and disclosure policy](SECURITY.md)
@@ -49,7 +51,7 @@ Assessed versions:
 - Wrapped-layer algebra and mask cancellation
 - Low-entropy encrypted-length attacks
 - LPN/PRF statistical and implementation analysis
-- Historical RNG and cross-artifact correlation
+- Historical RNG, generation-peg correlation, and cross-key composition
 - C++ memory and serialization leakage
 - Independent Rust wire-format differential audit
 - Pedersen/Ristretto relations
